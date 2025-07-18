@@ -40,6 +40,10 @@ header h1 {
 }
 
 /* for the top navbar */
+
+/* --- Responsive Top Navigation Bar --- */
+
+/* --- Responsive Top Navigation Bar --- */
 .top-nav {
   width: 100%;
   background: #fff;
@@ -47,10 +51,10 @@ header h1 {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 0;
   margin-bottom: 28px;
   display: flex;
   justify-content: center;
+  transition: height 0.22s;
 }
 
 .top-nav ul {
@@ -60,11 +64,10 @@ header h1 {
   list-style: none;
   margin: 0;
   padding: 0.7rem 0 0.6rem 0;
+  transition: all 0.22s;
 }
 
-.top-nav li {
-  display: inline-block;
-}
+.top-nav li { display: inline-block; }
 
 .top-nav a {
   color: #0353a4;
@@ -73,7 +76,7 @@ header h1 {
   padding: 7px 17px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.20s, color 0.17s;
+  transition: background 0.2s, color 0.17s;
   font-size: 1.08em;
   letter-spacing: 0.02em;
   display: inline-block;
@@ -84,91 +87,6 @@ header h1 {
   background: #e3f2fd;
   color: #0a1e3f;
 }
-
-
-
-/* Hide top-nav on mobile, show bottom-nav */
-
-@media (max-width: 767px) {
-  .top-nav {
-    display: none;
-  }
-}
-
-/* --- MODERNIZED RESPONSIVE NAVBAR --- */
-
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #0a1e3f;  /* Deep blue matching your theme */
-  display: flex;
-  justify-content: space-around;
-  padding: 8px 0;
-  box-shadow: 0 -2px 8px rgba(10, 30, 63, 0.15);
-  z-index: 9999;
-}
-
-.bottom-nav-link {
-  color: #fefefe;
-  text-decoration: none;
-  font-size: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
-  padding: 6px 0;
-  transition: background 0.2s ease;
-}
-
-.bottom-nav-link i {
-  font-size: 1.3rem;
-  margin-bottom: 2px;
-}
-
-.bottom-nav-link.active, 
-.bottom-nav-link:hover {
-  background-color: #0353a4;  /* Accent highlight */
-  color: #e0e7ff;
-  border-radius: 8px 8px 0 0;
-}
-
-@media(min-width: 768px) {
-  /* Hide bottom nav on wider screens */
-  .bottom-nav {
-    display: none;
-  }
-}
-
-
-
-@media (max-width:800px) {
-  nav ul {
-    flex-wrap: wrap;
-    gap: 0.4rem 0.2rem;
-    justify-content: center;
-  }
-  nav a {
-    font-size: 1em;
-    padding: 7px 10px;
-  }
-}
-@media (max-width:560px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.18rem 0;
-  }
-  nav a {
-    width: 90vw;
-    box-sizing: border-box;
-    text-align: left;
-    font-size: 0.99em;
-    margin: 0.7px 0;
-  }
-}
-
 /* 4. Container improvements using Flexbox */
 .container {
   display: flex;
