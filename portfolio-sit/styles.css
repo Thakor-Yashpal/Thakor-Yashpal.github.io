@@ -168,22 +168,23 @@ section h2 {
 }
 
 /* 9. Button style */
-.button {
-  background-color: #0353a4;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
+.project a {
+  color: #854cc7;
+  background-color: #f4f4fe;
+  font-weight: 600;
   text-decoration: none;
+  border: 1px solid #d1c4e9;
+  padding: 4px 14px;
+  border-radius: 4px;
+  font-size: 0.97em;
+  transition: background-color 0.19s, border-color 0.19s;
+  margin-top: 0.5rem;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.22s;
 }
-.button:hover {
-  background: #167bf7;
+.project a:hover {
+  background-color: #854cc7;
+  color: #fff;
+  border-color: #854cc7;
 }
 
 /* 10. Footer remains clean and stylish */

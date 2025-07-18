@@ -39,6 +39,78 @@ header h1 {
   opacity: 0.8;
 }
 
+/* --- NAVIGATION BAR MODERNIZED --- */
+
+nav {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(10,30,63,0.062);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  gap: 0.4rem 1.1rem;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav a {
+  color: #0353a4;
+  font-weight: 500;
+  font-family: 'Inter', 'IBM Plex Mono', Arial, sans-serif;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.18s, color 0.16s;
+  font-size: 1.08em;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+nav a:hover, nav a.active {
+  background: #e3f2fd;
+  color: #0a1e3f;
+}
+
+@media (max-width:800px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.4rem 0.2rem;
+    justify-content: center;
+  }
+  nav a {
+    font-size: 1em;
+    padding: 7px 10px;
+  }
+}
+@media (max-width:560px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.18rem 0;
+  }
+  nav a {
+    width: 90vw;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.99em;
+    margin: 0.7px 0;
+  }
+}
+
 /* 4. Container improvements using Flexbox */
 .container {
   display: flex;

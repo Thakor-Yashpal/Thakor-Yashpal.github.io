@@ -4,106 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLP Projects - Yashpalsinh Thakor</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=IBM+Plex+Mono:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (optionally for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <style>
         body {
-            font-family: 'IBM Plex Mono', monospace;
-            background-color: #F1EFEC;
-            color: #030303;
+            font-family: 'IBM Plex Mono', 'Inter', Arial, sans-serif;
+            background-color: #fefefe;
+            color: #0a1e3f;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.65;
         }
-
         header {
-            background-color: #123458;
-            color: #F1EFEC;
-            padding: 2rem 0;
+            background-color: #0a1e3f;
+            color: #fefefe;
+            padding: 2rem 0 1.4rem 0;
             text-align: center;
             margin-bottom: 2rem;
         }
-
         header h1 {
-            font-family: 'Doto', sans-serif;
+            font-family: 'Doto', 'Inter', Arial, sans-serif;
             font-weight: 700;
             margin: 0;
-            font-size: 3rem;
-        }
-
-         .back-button {
-        background-color: #123458; /* Button color */
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px; /* Rounded corners */
-          }
-       /* Button Style */
-    .button {
-    background-color: #123458; /* Button color */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
-    }
-         .back-button a {
-            color: #F1EFEC;
-            text-decoration: none;
+            font-size: 2.3rem;
+            letter-spacing: 1px;
         }
         section {
-            padding: 2rem;
-            background-color: #D4C9BE;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem 3rem;
+            background: #ffffff;
+            border-radius: 10px;
+            max-width: 950px;
+            margin: 0 auto 2.5rem auto;
+            box-shadow: 0 4px 16px rgba(10, 30, 63, 0.09);
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
         }
-
         section h2 {
-            font-family: 'Doto', sans-serif;
+            font-family: 'Doto', 'Inter', sans-serif;
             font-weight: 600;
-            color: #123458;
-            border-bottom: 2px solid #123458;
+            color: #854cc7;
+            border-bottom: 2px solid #854cc7;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
-         .project {
-            margin-bottom: 1.5rem;
+        .project {
+            background: #f8f9fc;
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+            padding: 1rem 1.4rem;
+            box-shadow: 0 1px 4px rgba(10, 30, 63, 0.04);
+            display: grid;
+            grid-template-columns: 62px 1fr auto;
+            grid-gap: 18px;
+            align-items: center;
+            margin-bottom: 1.1rem;
         }
-
+        .project-image {
+            width: 58px;
+            height: 58px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
         .project h3 {
+            color: #0a1e3f;
+            margin-bottom: 0.17rem;
+            font-size: 1.08rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            grid-column: span 2;
         }
-       /* Add a class for project links */
+        .project .badge {
+            background-color: #854cc7;
+            color: #fff;
+            padding: 2px 12px;
+            border-radius: 11px;
+            font-size: 0.81em;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .project .badge.in-progress {
+            background-color: #ffe066;
+            color: #7d6b00;
+        }
+        .project p {
+            color: #33475b;
+            font-size: 1em;
+            margin: 0.3rem 0;
+            grid-column: 2 / span 2;
+        }
         .project a {
-            color: #123458;
+            color: #854cc7;
+            font-weight: 600;
             text-decoration: none;
-            font-weight: bold;
+            border: 2px solid transparent;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: background-color 0.22s, border-color 0.19s;
+            justify-self: end;
         }
-
+        .project a:hover {
+            background-color: #854cc7;
+            color: #fff;
+            border-color: #854cc7;
+        }
+        .back-button {
+            background-color: #0a1e3f;
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 14px 2px 0 0;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .back-button a {
+            color: #fefefe;
+            text-decoration: none;
+        }
         footer {
-            background-color: #123458;
-            color: #F1EFEC;
+            background-color: #0a1e3f;
+            color: #fefefe;
             text-align: center;
             padding: 1rem 0;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.5rem; }
+            section { padding: 1.2rem 0.5rem; gap: 1rem; }
+            .project { grid-template-columns: 44px 1fr; padding: 8px 4px; }
+            .project-image { width: 38px; height: 38px; }
         }
     </style>
 </head>
@@ -115,35 +151,65 @@
 
     <section id="projects">
         <h2>Projects</h2>
-           <div class="project">
-            <h3>coming-soon-01</h3>
-            <p></p>
-            <a href="#">View Project</a> <!-- Replace # with your project link -->
-        </div>
-         <div class="project">
-            <h3>coming-soon-02</h3>
-            <p></p>
-            <a href="#">View Project</a> <!-- Replace # with your project link -->
-        </div>
+
+        <!-- Example project card with image and badge; update src if you have a screenshot or remove <img> if not -->
         <div class="project">
-            <h3>coming-soon-03</h3>
-            <p></p>
-            <a href="#">View Project</a> <!-- Replace # with your project link -->
+            <img src="comingsoon01.png" class="project-image" alt="NLP Project Coming Soon">
+            <div>
+                <h3>
+                    coming-soon-01 <span class="badge in-progress">Working on it</span>
+                </h3>
+                <p>
+                    New NLP project is currently being developed. Project info and code will be released soon!
+                </p>
+            </div>
+            <a href="#">View Project</a>
         </div>
 
         <div class="project">
-            <h3>coming-soon-04</h3>
-            <p></p>
-            <a href="#">View Project</a> <!-- Replace # with your project link -->
+            <img src="comingsoon02.png" class="project-image" alt="NLP Project Coming Soon">
+            <div>
+                <h3>
+                    coming-soon-02 <span class="badge in-progress">Working on it</span>
+                </h3>
+                <p>
+                    Stay tuned for updates on an innovative NLP project using deep neural networks.
+                </p>
+            </div>
+            <a href="#">View Project</a>
         </div>
 
+        <div class="project">
+            <img src="comingsoon03.png" class="project-image" alt="NLP Project Coming Soon">
+            <div>
+                <h3>
+                    coming-soon-03 <span class="badge in-progress">Working on it</span>
+                </h3>
+                <p>
+                    More details on this natural language processing tool will be shared soon.
+                </p>
+            </div>
+            <a href="#">View Project</a>
+        </div>
 
-      <div class="back-button">  <a href="index.html">Back to Portfolio</a></div>
+        <div class="project">
+            <img src="comingsoon04.png" class="project-image" alt="NLP Project Coming Soon">
+            <div>
+                <h3>
+                    coming-soon-04 <span class="badge in-progress">Working on it</span>
+                </h3>
+                <p>
+                    A novel NLP utility is under construction. Documentation and code base will be published soon.
+                </p>
+            </div>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="back-button"><a href="index.html">Back to Portfolio</a></div>
     </section>
 
     <footer>
         <p>© 2025 Yashpalsinh Thakor. All rights reserved.</p>
     </footer>
-
 </body>
 </html>

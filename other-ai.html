@@ -31,7 +31,6 @@
             font-size: 2.3rem;
             letter-spacing: 1px;
         }
-        /* Section as container/card */
         section {
             padding: 2rem 3rem;
             background: #ffffff;
@@ -51,32 +50,21 @@
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
-        /* Modern Project card: grid + image + badges */
         .project {
             background: #f8f9fc;
             border: 1px solid #d9e2ec;
             border-radius: 8px;
             padding: 1rem 1.4rem;
             box-shadow: 0 1px 4px rgba(10, 30, 63, 0.04);
-            display: grid;
-            grid-template-columns: 62px 1fr auto;
-            grid-gap: 18px;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
             margin-bottom: 1.1rem;
-        }
-        .project-image {
-            width: 58px;
-            height: 58px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         .project h3 {
             color: #0a1e3f;
             margin-bottom: 0.17rem;
             font-size: 1.08rem;
             font-weight: 600;
-            grid-column: span 2;
         }
         .project .badge {
             background-color: #ffc107;
@@ -94,8 +82,7 @@
         .project p {
             color: #33475b;
             font-size: 1em;
-            margin: 0.3rem 0;
-            grid-column: 2 / span 2;
+            margin: 0.3rem 0 0.8rem 0;
         }
         .project a {
             color: #0353a4;
@@ -105,7 +92,7 @@
             padding: 6px 12px;
             border-radius: 6px;
             transition: background-color 0.22s, border-color 0.19s;
-            justify-self: end;
+            align-self: flex-start;
         }
         .project a:hover {
             background-color: #0353a4;
@@ -138,9 +125,8 @@
         /* Responsive */
         @media (max-width: 768px) {
             header h1 { font-size: 1.5rem; }
-            section { padding: 1.2rem 0.5rem; gap: 1rem; }
-            .project { grid-template-columns: 44px 1fr; padding: 8px 4px; }
-            .project-image { width: 38px; height: 38px; }
+            section { padding: 1.2rem 0.5rem; gap: 1.1rem; }
+            .project { padding: 8px 4px; }
         }
     </style>
 </head>
@@ -154,57 +140,53 @@
         <h2>Projects</h2>
 
         <div class="project">
-            <!-- Example image below; update src/alt as local image, or remove if no screenshot -->
-            <img src="bikesharing.png" class="project-image" alt="Bike Sharing Demand project">
-            <div>
-                <h3>
-                    Bike-Sharing Demand Prediction
-                    <span class="badge in-progress">Working on it</span>
-                </h3>
-                <p>Regression-based ML project forecasting daily bike rentals using weather, calendar, and temporal features. Implements data cleaning, feature engineering, and model tuning.</p>
-            </div>
+            <h3>
+                Bike-Sharing Demand Prediction
+                <span class="badge in-progress">Working on it</span>
+            </h3>
+            <p>
+                Regression-based ML project forecasting daily bike rentals using weather, calendar, and temporal features. Implements data cleaning, feature engineering, and model tuning.
+            </p>
         </div>
 
         <div class="project">
-            <img src="titanic.png" class="project-image" alt="Titanic Survival Prediction">
-            <div>
-                <h3>Titanic Survival Prediction <span class="badge pytorch">PyTorch</span></h3>
-                <p>Predictive modeling on the classic Titanic dataset, focusing on feature extraction, imputation, and comparative analysis between classic ML algorithms (Logistic Regression, Random Forest).</p>
-                <a href="https://github.com/Thakor-Yashpal/Titanic-Survival-Prediction">View Project</a>
-            </div>
+            <h3>
+                Titanic Survival Prediction <span class="badge pytorch">PyTorch</span>
+            </h3>
+            <p>
+                Predictive modeling on the classic Titanic dataset, focusing on feature extraction, imputation, and comparative analysis between classic ML algorithms (Logistic Regression, Random Forest).
+            </p>
+            <a href="https://github.com/Thakor-Yashpal/Titanic-Survival-Prediction">View Project</a>
         </div>
 
         <div class="project">
-            <img src="tvscript.png" class="project-image" alt="TV Script Generation project">
-            <div>
-                <h3>
-                    TV Script Generation (RNN-based)
-                    <span class="badge in-progress">Working on it</span>
-                </h3>
-                <p>Utilizes Recurrent Neural Networks (RNNs) to generate creative TV script text based on show transcripts, demonstrating sequence modeling skills.</p>
-            </div>
+            <h3>
+                TV Script Generation (RNN-based)
+                <span class="badge in-progress">Working on it</span>
+            </h3>
+            <p>
+                Utilizes Recurrent Neural Networks (RNNs) to generate creative TV script text based on show transcripts, demonstrating sequence modeling skills.
+            </p>
         </div>
 
         <div class="project">
-            <img src="facegen.png" class="project-image" alt="Face Generation GAN project">
-            <div>
-                <h3>
-                    Face Generation (GANs)
-                    <span class="badge in-progress">Working on it</span>
-                </h3>
-                <p>Applies Generative Adversarial Networks to synthesize realistic human faces from noise, showcasing knowledge of adversarial model architectures and training tricks.</p>
-            </div>
+            <h3>
+                Face Generation (GANs)
+                <span class="badge in-progress">Working on it</span>
+            </h3>
+            <p>
+                Applies Generative Adversarial Networks to synthesize realistic human faces from noise, showcasing knowledge of adversarial model architectures and training tricks.
+            </p>
         </div>
 
         <div class="project">
-            <img src="sentiment.png" class="project-image" alt="Sentiment Analysis Model project">
-            <div>
-                <h3>
-                    Sentiment Analysis Model Deployment
-                    <span class="badge in-progress">Working on it</span>
-                </h3>
-                <p>Full-stack ML pipeline for training, deploying, and serving a sentiment analysis model as a web API. Includes REST endpoint creation and live model inference.</p>
-            </div>
+            <h3>
+                Sentiment Analysis Model Deployment
+                <span class="badge in-progress">Working on it</span>
+            </h3>
+            <p>
+                Full-stack ML pipeline for training, deploying, and serving a sentiment analysis model as a web API. Includes REST endpoint creation and live model inference.
+            </p>
         </div>
 
         <div class="back-button"><a href="index.html">Back to Portfolio</a></div>
