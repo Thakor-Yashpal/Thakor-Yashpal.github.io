@@ -1,207 +1,224 @@
+/* --- MODERNIZED PORTFOLIO CSS --- */
+
+/* 1. Google Fonts modern stack */
 body {
-    font-family: 'IBM Plex Mono', monospace;
-    background-color: #F1EFEC;
-    color: #030303;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: 'IBM Plex Mono', 'Inter', 'Roboto', Arial, sans-serif;
+  background-color: #fefefe;         /* Off-white for a clean appearance */
+  color: #0a1e3f;                    /* Deep navy blue text for high contrast */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
+/* 2. Header - strong blue with white text */
 header {
-    background-color: #123458;
-    color: #F1EFEC;
-    padding: 2rem 0;
-    text-align: center;
-    margin-bottom: 2rem;
+  background-color: #0a1e3f;         /* Modern dark blue */
+  color: #fefefe;
+  padding: 2rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
 }
-
 header h1 {
-    font-family: 'Doto', sans-serif;
-    font-weight: 700;
-    margin: 0;
-    font-size: 3rem;
+  font-family: 'Doto', 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  margin: 0;
+  font-size: 3rem;
 }
 
-/* Social Links */
+/* 3. Social Links */
 .social-links {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
-
 .social-links a {
-    color: #F1EFEC;
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
-    text-decoration: none; /* Remove underline */
+  color: #fefefe;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
 }
-
 .social-links a:hover {
-    opacity: 0.8; /* Slightly fade on hover */
+  opacity: 0.8;
 }
 
+/* 4. Container improvements using Flexbox */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 5. Section styles with card-like look */
 section {
-    padding: 2rem;
-    background-color: #D4C9BE;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem 3rem;
+  background-color: #ffffff;           /* Clean white section */
+  border-radius: 10px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 16px rgba(10, 30, 63, 0.1);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
-
 section h2 {
-    font-family: 'Doto', sans-serif;
-    font-weight: 600;
-    color: #123458;
-    border-bottom: 2px solid #123458;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+  font-family: 'Doto', 'Inter', sans-serif;
+  font-weight: 600;
+  color: #0353a4;
+  border-bottom: 2px solid #0353a4;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
+/* 6. Project cards: grid/flex layout, images, badges */
 .project {
-    margin-bottom: 1.5rem;
+  background: #f8f9fc;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 4px rgba(10, 30, 63, 0.04);
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  grid-gap: 18px;
+  align-items: center;
+}
+
+.project-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
 }
 
 .project h3 {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  color: #0a1e3f;
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+  grid-column: span 2;
+}
+.project p {
+  color: #33475b;
+  font-size: 1em;
+  margin: 0.3rem 0;
+  grid-column: 2 / span 2;
 }
 
-footer {
-    background-color: #123458;
-    color: #F1EFEC;
-    text-align: center;
-    padding: 1rem 0;
+.project ul {
+  padding-left: 20px;
+  color: #33475b;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  grid-column: 2 / span 2;
 }
-
-/* Add a class for project links */
+/* Project link as a modern badge-like button */
 .project a {
-    color: #123458;
-    text-decoration: none;
-    font-weight: bold;
+  color: #0353a4;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.26s, border-color 0.22s;
+  justify-self: end;
+}
+.project a:hover {
+  background-color: #0353a4;
+  color: #fff;
+  border-color: #0353a4;
 }
 
-/* Hamburger menu styles */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    padding: 5px; /* Add padding for a larger clickable area */
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+/* 7. Concise badges for project tags/status */
+.badge {
+  background-color: #0353a4;
+  color: #fff;
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-left: 6px;
+  font-weight: 600;
+  vertical-align: middle;
+  display: inline-block;
+}
+.badge.in-progress {
+  background-color: #ffc107;
+  color: #222;
+}
+.badge.pytorch {
+  background-color: #ee4c2c;
+  color: #fff;
+}
+.badge.cv {
+  background-color: #3EC6E0;
+  color: #fff;
+}
+.badge.nlp {
+  background-color: #854cc7;
+  color: #fff;
 }
 
-.hamburger-menu .bar {
-    width: 100%;
-    height: 3px;
-    background-color: #F1EFEC;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transitions */
+/* 8. Section header stripe */
+.header-stripe {
+  background-color: #d4e5fc;
+  height: 5px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 0.5rem;
 }
 
-.menu {
+/* 9. Button style */
+.button {
+  background-color: #0353a4;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.22s;
+}
+.button:hover {
+  background: #167bf7;
+}
+
+/* 10. Footer remains clean and stylish */
+footer {
+  background-color: #0a1e3f;
+  color: #fefefe;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* 11. Responsive design preserved and enhanced */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  section {
+    padding: 1.3rem 0.5rem;
+    gap: 1.2rem;
+  }
+  .project {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #123458;
-    color: #F1EFEC;
-    z-index: 10;
-    padding: 2rem;
     text-align: center;
-    display: none; /* Hide the menu initially */
-
-    /* Style the menu items */
-    a {
-        color: #F1EFEC;
-        text-decoration: none;
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-        display: block; /* Make links take up full width */
-    }
+    padding: 14px 8px;
+  }
+  .project-image {
+    width: 90%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto 10px auto;
+  }
+  .project a {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
-.menu.active {
-    display: flex; /* Show the menu when active */
-}
-
-.hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Optional: Creative touch for the header */
-.header-stripe {
-    background-color: #D4C9BE;
-    height: 5px;
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 0.5rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    section {
-        padding: 1.5rem;
-    }
-
-    /* Make header smaller on smaller screens */
-    header {
-        padding: 1.5rem 0;
-    }
-
-    /* Hamburger Menu on smaller screens */
-    .hamburger-menu {
-        display: flex;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .project {
-        margin-bottom: 1rem;
-    }
-
-    /* Add styling to navigation bar links */
-    nav a {
-        color: #F1EFEC;
-        text-decoration: none;
-        margin: 0 1rem;
-        font-size: 1.1rem; /* Slightly smaller font size for nav links */
-    }
-}
-/* Button Style */
-.button {
-background-color: #123458; /* Button color */
-border: none;
-color: white;
-padding: 10px 20px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin: 4px 2px;
-cursor: pointer;
-border-radius: 5px; /* Rounded corners */
-}
-
-.coming-soon {
-font-style: italic;
-color: grey;
-}
+/* --- END MODERNIZED --- */

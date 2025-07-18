@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other AI & ML Projects - Yashpalsinh Thakor</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=IBM+Plex+Mono:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'IBM Plex Mono', 'Inter', Arial, sans-serif;
+            background-color: #fefefe;
+            color: #0a1e3f;
+            margin: 0;
+            padding: 0;
+            line-height: 1.65;
+        }
+        header {
+            background-color: #0a1e3f;
+            color: #fefefe;
+            padding: 2rem 0 1.4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        header h1 {
+            font-family: 'Doto', 'Inter', Arial, sans-serif;
+            font-weight: 700;
+            margin: 0;
+            font-size: 2.3rem;
+            letter-spacing: 1px;
+        }
+        /* Section as container/card */
+        section {
+            padding: 2rem 3rem;
+            background: #ffffff;
+            border-radius: 10px;
+            max-width: 950px;
+            margin: 0 auto 2.5rem auto;
+            box-shadow: 0 4px 16px rgba(10, 30, 63, 0.09);
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+        section h2 {
+            font-family: 'Doto', 'Inter', sans-serif;
+            font-weight: 600;
+            color: #0353a4;
+            border-bottom: 2px solid #0353a4;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        /* Modern Project card: grid + image + badges */
+        .project {
+            background: #f8f9fc;
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+            padding: 1rem 1.4rem;
+            box-shadow: 0 1px 4px rgba(10, 30, 63, 0.04);
+            display: grid;
+            grid-template-columns: 62px 1fr auto;
+            grid-gap: 18px;
+            align-items: center;
+            margin-bottom: 1.1rem;
+        }
+        .project-image {
+            width: 58px;
+            height: 58px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .project h3 {
+            color: #0a1e3f;
+            margin-bottom: 0.17rem;
+            font-size: 1.08rem;
+            font-weight: 600;
+            grid-column: span 2;
+        }
+        .project .badge {
+            background-color: #ffc107;
+            color: #232323;
+            padding: 2px 13px;
+            border-radius: 11px;
+            font-size: 0.82em;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .project .badge.pytorch { background-color: #ee4c2c; color: #fff; }
+        .project .badge.in-progress { background-color: #ffe066; color: #7d6b00; }
+        .project p {
+            color: #33475b;
+            font-size: 1em;
+            margin: 0.3rem 0;
+            grid-column: 2 / span 2;
+        }
+        .project a {
+            color: #0353a4;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid transparent;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: background-color 0.22s, border-color 0.19s;
+            justify-self: end;
+        }
+        .project a:hover {
+            background-color: #0353a4;
+            color: #fff;
+            border-color: #0353a4;
+        }
+        .back-button {
+            background-color: #0a1e3f;
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 14px 2px 0 0;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .back-button a {
+            color: #fefefe;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #0a1e3f;
+            color: #fefefe;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.5rem; }
+            section { padding: 1.2rem 0.5rem; gap: 1rem; }
+            .project { grid-template-columns: 44px 1fr; padding: 8px 4px; }
+            .project-image { width: 38px; height: 38px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Other AI & ML Projects</h1>
+    </header>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <!-- Example image below; update src/alt as local image, or remove if no screenshot -->
+            <img src="bikesharing.png" class="project-image" alt="Bike Sharing Demand project">
+            <div>
+                <h3>
+                    Bike-Sharing Demand Prediction
+                    <span class="badge in-progress">Working on it</span>
+                </h3>
+                <p>Regression-based ML project forecasting daily bike rentals using weather, calendar, and temporal features. Implements data cleaning, feature engineering, and model tuning.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="titanic.png" class="project-image" alt="Titanic Survival Prediction">
+            <div>
+                <h3>Titanic Survival Prediction <span class="badge pytorch">PyTorch</span></h3>
+                <p>Predictive modeling on the classic Titanic dataset, focusing on feature extraction, imputation, and comparative analysis between classic ML algorithms (Logistic Regression, Random Forest).</p>
+                <a href="https://github.com/Thakor-Yashpal/Titanic-Survival-Prediction">View Project</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="tvscript.png" class="project-image" alt="TV Script Generation project">
+            <div>
+                <h3>
+                    TV Script Generation (RNN-based)
+                    <span class="badge in-progress">Working on it</span>
+                </h3>
+                <p>Utilizes Recurrent Neural Networks (RNNs) to generate creative TV script text based on show transcripts, demonstrating sequence modeling skills.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="facegen.png" class="project-image" alt="Face Generation GAN project">
+            <div>
+                <h3>
+                    Face Generation (GANs)
+                    <span class="badge in-progress">Working on it</span>
+                </h3>
+                <p>Applies Generative Adversarial Networks to synthesize realistic human faces from noise, showcasing knowledge of adversarial model architectures and training tricks.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="sentiment.png" class="project-image" alt="Sentiment Analysis Model project">
+            <div>
+                <h3>
+                    Sentiment Analysis Model Deployment
+                    <span class="badge in-progress">Working on it</span>
+                </h3>
+                <p>Full-stack ML pipeline for training, deploying, and serving a sentiment analysis model as a web API. Includes REST endpoint creation and live model inference.</p>
+            </div>
+        </div>
+
+        <div class="back-button"><a href="index.html">Back to Portfolio</a></div>
+    </section>
+
+    <footer>
+        <p>© 2025 Yashpalsinh Thakor. All rights reserved.</p>
+    </footer>
+</body>
+</html>
