@@ -23,14 +23,89 @@
                 <a href="https://www.kaggle.com/yashpalthakor" target="_blank" aria-label="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
                 <a href="https://x.com/Yashpalsinh_0" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
             </div>
+
+            <style>
+                /* Hide bottom nav on desktop and wide tablets */
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none !important;
+  }
+}
+
+/* Show and style bottom nav on mobile */
+@media (max-width: 767px) {
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 54px;
+    background: #0a1e3f;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 12px rgba(10, 30, 63, 0.12);
+    z-index: 9999;
+  }
+  .bottom-nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.97em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    height: 100%;
+    transition: background 0.16s;
+    padding: 0;
+    margin: 0;
+  }
+  .bottom-nav-link i {
+    font-size: 1.15rem;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  .bottom-nav-link span {
+    font-size: 0.81em;
+    margin-top: 1px;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+  }
+  .bottom-nav-link.active,
+  .bottom-nav-link:active,
+  .bottom-nav-link:focus,
+  .bottom-nav-link:hover {
+    background: #0353a4;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+  }
+  body {
+    margin-bottom: 54px; /* Prevents page content from being hidden under the nav */
+  }
+}
+            </style>>
         </header>
-    
-        <!-- Hamburger menu button (Mobile only, controlled with JS and CSS) -->
-        <div class="hamburger-menu" id="hamburger-menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        </div>
+
+    <!-- buttom (desktop/mobile) responsive navbar -->
+            <nav class="bottom-nav">
+            <a href="#projects" class="bottom-nav-link active">
+                <i class="fas fa-home"></i>
+                <span>Projects</span>
+            </a>
+            <a href="#skills" class="bottom-nav-link">
+                <i class="fas fa-code"></i>
+                <span>Skills</span>
+            </a>
+            <a href="#experience" class="bottom-nav-link">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <a href="contact.html" class="bottom-nav-link">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+            </nav>
 
         <!-- Top (desktop/mobile) responsive navbar -->
         <nav class="top-nav" id="top-nav">
