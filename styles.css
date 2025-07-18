@@ -40,6 +40,10 @@ header h1 {
 }
 
 /* for the top navbar */
+
+/* --- Responsive Top Navigation Bar --- */
+
+/* --- Responsive Top Navigation Bar --- */
 .top-nav {
   width: 100%;
   background: #fff;
@@ -47,10 +51,10 @@ header h1 {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 0;
   margin-bottom: 28px;
   display: flex;
   justify-content: center;
+  transition: height 0.22s;
 }
 
 .top-nav ul {
@@ -60,11 +64,10 @@ header h1 {
   list-style: none;
   margin: 0;
   padding: 0.7rem 0 0.6rem 0;
+  transition: all 0.22s;
 }
 
-.top-nav li {
-  display: inline-block;
-}
+.top-nav li { display: inline-block; }
 
 .top-nav a {
   color: #0353a4;
@@ -73,7 +76,7 @@ header h1 {
   padding: 7px 17px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.20s, color 0.17s;
+  transition: background 0.2s, color 0.17s;
   font-size: 1.08em;
   letter-spacing: 0.02em;
   display: inline-block;
@@ -85,89 +88,96 @@ header h1 {
   color: #0a1e3f;
 }
 
-
-
-/* Hide top-nav on mobile, show bottom-nav */
-
-@media (max-width: 767px) {
-  .top-nav {
-    display: none;
-  }
-}
-
-/* --- MODERNIZED RESPONSIVE NAVBAR --- */
-
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #0a1e3f;  /* Deep blue matching your theme */
-  display: flex;
-  justify-content: space-around;
-  padding: 8px 0;
-  box-shadow: 0 -2px 8px rgba(10, 30, 63, 0.15);
-  z-index: 9999;
-}
-
-.bottom-nav-link {
-  color: #fefefe;
-  text-decoration: none;
-  font-size: 0.75rem;
-  display: flex;
+/* Hamburger Menu Icon */
+.hamburger-menu {
+  display: none;
   flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
-  padding: 6px 0;
-  transition: background 0.2s ease;
+  justify-content: space-around;
+  width: 34px;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  right: 22px;
+  top: 26px;
+  z-index: 110;
 }
 
-.bottom-nav-link i {
-  font-size: 1.3rem;
-  margin-bottom: 2px;
+.hamburger-menu .bar {
+  width: 100%;
+  height: 4px;
+  background: #0353a4;
+  border-radius: 3px;
+  margin: 4px 0;
+  transition: all 0.3s;
 }
 
-.bottom-nav-link.active, 
-.bottom-nav-link:hover {
-  background-color: #0353a4;  /* Accent highlight */
-  color: #e0e7ff;
-  border-radius: 8px 8px 0 0;
+/* Hamburger icon transformation on open */
+.hamburger-menu.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
-@media(min-width: 768px) {
-  /* Hide bottom nav on wider screens */
-  .bottom-nav {
-    display: none;
+/* --- Mobile Navbar Styles --- */
+@media (max-width: 880px) {
+  .hamburger-menu { display: flex; }
+  .top-nav {
+    justify-content: flex-start;
+    min-height: 54px;
+    margin-bottom: 13px;
+    background: #fff;
   }
-}
-
-
-
-@media (max-width:800px) {
-  nav ul {
-    flex-wrap: wrap;
-    gap: 0.4rem 0.2rem;
-    justify-content: center;
-  }
-  nav a {
-    font-size: 1em;
-    padding: 7px 10px;
-  }
-}
-@media (max-width:560px) {
-  nav ul {
+  .top-nav ul {
     flex-direction: column;
-    align-items: center;
-    gap: 0.18rem 0;
+    align-items: flex-start;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 66px;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 8px 26px rgba(10,30,63,0.09);
+    gap: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s cubic-bezier(.51,1.56,.37,.95), opacity 0.2s;
+    z-index: 101;
   }
-  nav a {
-    width: 90vw;
-    box-sizing: border-box;
-    text-align: left;
-    font-size: 0.99em;
-    margin: 0.7px 0;
+  .top-nav.open ul {
+    max-height: 450px;
+    opacity: 1;
+    visibility: visible;
+    padding: 1em 0 1em 0;
+  }
+  .top-nav ul li {
+    display: block;
+    width: 100%;
+  }
+  .top-nav a {
+    width: 100%;
+    display: block;
+    padding: 13px 24px;
+    border-radius: 0;
+    font-size: 1.07em;
   }
 }
+
+/* Optional: nav location tweaks for smaller phones */
+@media (max-width: 600px) {
+  .top-nav { top: 0; }
+  .hamburger-menu {
+    top: 13px;
+    right: 10px;
+  }
+}
+
+
 
 /* 4. Container improvements using Flexbox */
 .container {

@@ -25,15 +25,15 @@
             </div>
         </header>
     
-         <!-- Hamburger menu button -->
-        <div class="hamburger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <!-- Hamburger menu button (Mobile only, controlled with JS and CSS) -->
+        <div class="hamburger-menu" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
         </div>
-    
-        <!-- Navigation menu -->
-        <nav class="top-nav">
+
+        <!-- Top (desktop/mobile) responsive navbar -->
+        <nav class="top-nav" id="top-nav">
         <ul>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -44,25 +44,6 @@
             <li><a href="#other-ai">Other AI & ML</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        </nav>
-
-        <nav class="bottom-nav">
-        <a href="#projects" class="bottom-nav-link active">
-            <i class="fas fa-home"></i>
-            <span>Projects</span>
-        </a>
-        <a href="#skills" class="bottom-nav-link">
-            <i class="fas fa-code"></i>
-            <span>Skills</span>
-        </a>
-        <a href="#experience" class="bottom-nav-link">
-            <i class="fas fa-briefcase"></i>
-            <span>Experience</span>
-        </a>
-        <a href="contact.html" class="bottom-nav-link">
-            <i class="fas fa-envelope"></i>
-            <span>Contact</span>
-        </a>
         </nav>
 
 
@@ -300,6 +281,13 @@
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <script>
+            document.getElementById('hamburger-menu').onclick = function() {
+            document.getElementById('top-nav').classList.toggle('open');
+            this.classList.toggle('open');
+            };
+            </script>
+
     
     </body>
     </html>
