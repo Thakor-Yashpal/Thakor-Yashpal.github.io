@@ -33,79 +33,157 @@
         </div>
     
         <!-- Navigation menu -->
-        <nav>
-        <input type="checkbox" id="menu-toggle" />
-        <label class="menu-icon" for="menu-toggle" aria-label="Open navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+        <nav class="top-nav">
         <ul>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#languages">Languages</a></li>
             <li><a href="#coming-soon">Coming Soon</a></li>
-            <li><a href="#computer-vision">Computer Vision Projects</a></li>
+            <li><a href="#computer-vision">Computer Vision</a></li>
             <li><a href="#nlp-projects">NLP Projects</a></li>
-            <li><a href="#other-ai">Other AI & ML Projects</a></li>
+            <li><a href="#other-ai">Other AI & ML</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         </nav>
 
+        <nav class="bottom-nav">
+        <a href="#projects" class="bottom-nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Projects</span>
+        </a>
+        <a href="#skills" class="bottom-nav-link">
+            <i class="fas fa-code"></i>
+            <span>Skills</span>
+        </a>
+        <a href="#experience" class="bottom-nav-link">
+            <i class="fas fa-briefcase"></i>
+            <span>Experience</span>
+        </a>
+        <a href="contact.html" class="bottom-nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+        </nav>
 
-    
+
         <section id="projects">
             <h2>Projects</h2>
             <div class="project">
-                <h3>Rice Type Classification (PyTorch)</h3>
-                <p>Developed a neural network in PyTorch to classify rice types. Implemented data preprocessing, model architecture, training loop, and evaluation metrics. Utilized GPU acceleration (CUDA) for efficient training.</p>
-                <a href="https://github.com/Thakor-Yashpal/Small-projrcts-for-DL/tree/main/Type%20Classification">View Project</a> <!-- Replace # with your project link -->
+            <h3>Rice Type Classification – PyTorch, Custom CNN</h3>
+            <p>
+                Engineered a custom convolutional neural network with PyTorch to accurately classify rice varieties. Designed efficient data preprocessing and augmentation pipelines, and implemented GPU-accelerated training for rapid experimentation and model optimization.
+            </p>
+            <ul>
+                <li>Robust image preprocessing and dataset balancing</li>
+                <li>End-to-end pipeline: data loading, model design, and evaluation metrics</li>
+                <li>Leveraged CUDA for significant speedup in model convergence</li>
+                <li>Open-source code: <a href="https://github.com/Thakor-Yashpal/Small-projrcts-for-DL/tree/main/Type%20Classification" target="_blank">GitHub Project</a></li>
+            </ul>
             </div>
+
             <div class="project">
-                <h3>Gemini Chat – Google API Integration</h3>
-                <p>Created a Python-based chatbot leveraging Google's Gemini AI model. Designed a clean user interface for seamless interaction. Demonstrated proficiency in API integration.</p>
-                <a href="https://github.com/Thakor-Yashpal/Gemini-chat-Google-">View Project</a> <!-- Replace # with your project link -->
+            <h3>Gemini Chat – Google Gemini API Integration, Python UI</h3>
+            <p>
+                Designed and developed a smart chatbot in Python by integrating Google's Gemini AI model through API calls. Focused on user experience with a clean interface and demonstrated mastery of external API integration and custom chatbot logic.
+            </p>
+            <ul>
+                <li>Google Gemini API integration for advanced language understanding</li>
+                <li>Customizable UI for seamless and intuitive interaction</li>
+                <li>Demonstrated robust error handling and conversational flow</li>
+                <li>Source code: <a href="https://github.com/Thakor-Yashpal/Gemini-chat-Google-" target="_blank">GitHub</a></li>
+            </ul>
             </div>
+
             <div class="project">
-                <h3>Car Object Detection</h3>
-                <p>Implemented an object detection pipeline to identify and locate cars in images. Involved data annotation, model selection, training, and visualization (bounding boxes).</p>
-                <a href="https://github.com/Thakor-Yashpal/Car-Object-Dection">View Project</a> <!-- Replace # with your project link -->
+            <h3>Car Object Detection – Deep Learning Pipeline</h3>
+            <p>
+                Built an end-to-end object detection pipeline to locate vehicles in images. Performed dataset annotation, model selection, and training, with a strong focus on accurate localization through bounding box visualization and post-processing.
+            </p>
+            <ul>
+                <li>Labeled and prepared custom car datasets for supervised learning</li>
+                <li>Implemented and fine-tuned detection models (YOLO/Faster RCNN)</li>
+                <li>Visualized model predictions with real-time bounding boxes</li>
+                <li>Repo: <a href="https://github.com/Thakor-Yashpal/Car-Object-Dection" target="_blank">GitHub</a></li>
+            </ul>
             </div>
-             <div class="project">
-                <h3>Titanic Survival Prediction</h3>
-                <p>Developed a machine learning model to predict passenger survival on the Titanic dataset. Employed feature engineering, model training, and performance evaluation techniques.</p>
-                <a href="https://github.com/Thakor-Yashpal/Titanic-Survival-Prediction">View Project</a> <!-- Replace # with your project link -->
-            </div>
+
             <div class="project">
-                <h3>Animal Faces Image Classifier (PyTorch)</h3>
-                <p>Built a CNN in PyTorch to classify animal faces (cats, dogs, wild animals) from the AFHQ dataset. Utilized data augmentation and preprocessing techniques. Optimized model performance for high accuracy.</p>
-                <a href="https://github.com/Thakor-Yashpal/Animal-Face-Image-Classifier">View Project</a> <!-- Replace # with your project link -->
+            <h3>Titanic Survival Prediction – Classic ML, Feature Engineering</h3>
+            <p>
+                Developed a predictive model to estimate Titanic passenger survival probabilities using feature engineering and statistical modeling. Applied domain expertise to preprocess data and selected optimal classifiers for robust performance.
+            </p>
+            <ul>
+                <li>Feature engineering: missing values, categorical encoding, scaling</li>
+                <li>Evaluated multiple algorithms (Logistic Regression, Random Forest)</li>
+                <li>Performance tuning with cross-validation techniques</li>
+                <li>Project notebook: <a href="https://github.com/Thakor-Yashpal/Titanic-Survival-Prediction" target="_blank">GitHub</a></li>
+            </ul>
             </div>
+
             <div class="project">
-                <h3>Snake Game</h3>
-                <p>I utilized HTML, CSS, JavaScript, React.js, and Material UI for this project. Building a snake game in HTML, CSS, and JavaScript offered hands-on experience in game development.</p>
-                <a href="https://github.com/Thakor-Yashpal/Snake-Game">View Project</a> <!-- Replace # with your project link -->
+            <h3>Animal Faces Image Classifier – PyTorch, AFHQ Dataset</h3>
+            <p>
+                Built a deep CNN in PyTorch for multi-class animal face classification using the AFHQ dataset. Leveraged data augmentation, advanced preprocessing, and model regularization to achieve high accuracy and strong generalization.
+            </p>
+            <ul>
+                <li>Augmented images to improve model robustness</li>
+                <li>Custom architecture optimized for multi-class classification</li>
+                <li>Validated on challenging real-world images</li>
+                <li>Source code: <a href="https://github.com/Thakor-Yashpal/Animal-Face-Image-Classifier" target="_blank">GitHub</a></li>
+            </ul>
             </div>
+
             <div class="project">
-                <h3>Brain-Tumor-Detection-PyTorch-ResNet18-Grad-CAM</h3>
-                <p>Using PyTorch, I developed a brain tumor detection model leveraging ResNet18 and Grad-CAM visualization, incorporating U-Net-based segmentation inspired by recent research for enhanced accuracy and interpretability.</p>
-                <a href="https://www.kaggle.com/code/yashpalthakor/brain-tumor-detection-pytorch-resnet18-grad-cam">View Project</a> <!-- Replace # with your project link -->
+            <h3>Personality Pulse – PyTorch NLP + Streamlit Dashboard</h3>
+            <p>
+                Created PersonalityPulse, a personality prediction web app backed by a PyTorch classification model. Achieved ~99% accuracy on Kaggle data, and enabled live predictions using a fast, user-friendly Streamlit interface.
+            </p>
+            <ul>
+                <li>Deep learning classification of personality types (introvert/extrovert)</li>
+                <li>Permutation feature importance for model interpretability</li>
+                <li>Interactive predictions and insights via Streamlit dashboard</li>
+                <li>Open code: <a href="https://github.com/Thakor-Yashpal/PersonalityPulse" target="_blank">GitHub</a></li>
+            </ul>
             </div>
+
             <div class="project">
-                <h3>NPL-ChatBot</h3>
-                <p>Python-based chatbot using TextBlob and sentiment analysis for tailored</p>
-                <a href="https://github.com/Thakor-Yashpal/NLP_ChatBot.py">View Project</a> <!-- Replace # with your project link -->
+            <h3>🧠 Brain Tumor Detection – PyTorch, ResNet18, U-Net, Grad-CAM</h3>
+            <p>
+                Developed an end-to-end brain tumor detection pipeline using PyTorch, leveraging <strong>ResNet18</strong> with <strong>U-Net-inspired segmentation</strong> and <strong>Grad-CAM visualizations</strong> for model explainability. Achieved strong accuracy on public MRI datasets, focusing on practical medical AI applications.
+            </p>
+            <ul>
+                <li>Hybrid architecture: U-Net segmentation & ResNet18 classification</li>
+                <li>Grad-CAM for interpretable deep learning results</li>
+                <li>Open-source code: <a href="https://www.kaggle.com/code/yashpalthakor/brain-tumor-detection-pytorch-resnet18-grad-cam/input" target="_blank">Kaggle Project</a></li>
+            </ul>
             </div>
+
+            <div class="project">
+            <h3>NLP ChatBot – TextBlob, Sentiment Analysis, Python</h3>
+            <p>
+                Developed a rule-based NLP chatbot in Python, using TextBlob for sentiment analysis and dynamic response tailoring. Demonstrated understanding of conversational AI and natural language processing workflows.
+            </p>
+            <ul>
+                <li>TextBlob sentiment analysis for adaptive responses</li>
+                <li>Custom response logic for user engagement</li>
+                <li>Focus on simplicity and ease-of-use</li>
+                <li>GitHub code: <a href="https://github.com/Thakor-Yashpal/NLP_ChatBot.py" target="_blank">GitHub</a></li>
+            </ul>
+            </div>
+
         </section>
     
+
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li><strong>Languages:</strong> HTML, CSS,javascript, Python, TypeScript (beginner)</li>
-                <li><strong>Technologies:</strong> NumPy, PyTorch,NLP (natural language processing),Pandas, OpenCV, Google Cloud API,Scikit-Learn,LangChain,Hugging Face,OpenNN</li>
-                <li><strong>Concepts:</strong> Object-oriented programming, functional programming, Machine Learning, Deep Learning, CNNs, Object Detection, Data Preprocessing, Model Evaluation, API Integration</li>
-            </ul>
+                <ul>
+                <li><strong>Languages:</strong> Python, C++, HTML, CSS, JavaScript</li>
+                <li><strong>Deep Learning:</strong> PyTorch, TensorFlow, U-Net, ResNet</li>
+                <li><strong>Data & ML:</strong> NumPy, Pandas, Scikit-Learn, OpenCV</li>
+                <li><strong>NLP:</strong> HuggingFace, LangChain, TextBlob</li>
+                <li><strong>Concepts:</strong> Model Explainability, Image Segmentation, Object Detection, CNNs</li>
+                </ul>
+
         </section>
     
         <section id="experience">
@@ -178,33 +256,43 @@
             </section>
 
     
-        <section id="computer-vision">
-            <h2>Computer Vision Projects with PyTorch</h2>
-            <a href="computer-vision.html" class="button">View More Computer Vision Projects</a> <!--Link for page 2-->
+        <section id="computer-vision" style="margin-bottom: 2rem;">
+        <div style="background: #f8f9fc; border-radius: 9px; box-shadow: 0 2px 6px rgba(10,30,63,0.07); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1.1rem;">
+            <span style="font-size: 1.7em; background:#3EC6E0; color:#fff; border-radius:50%; width:2.1em; height:2.1em; text-align:center; display:flex; justify-content:center; align-items:center;">🖼️</span>
+            <div style="flex:1;">
+            <h2 style="color: #0353a4; font-family: 'Doto', 'Inter', Arial, sans-serif; font-size: 1.35rem; margin:0 0 0.25em 0;">Computer Vision Projects with PyTorch</h2>
+            <a href="computer-vision.html" style="color:#0353a4; background:#e3f2fd; border:1.5px solid #0353a4; padding:6px 16px; border-radius:5px;font-size:0.97em;text-decoration:none; font-weight:600; display:inline-block; margin-top:0.2rem;">View More</a>
+            </div>
+        </div>
         </section>
-    
-        <section id="nlp-projects">
-            <h2>Natural Language Processing Projects</h2>
-            <a href="nlp.html" class="button">View More NLP Projects</a> <!--Link for page 3-->
+
+        <section id="nlp-projects" style="margin-bottom: 2rem;">
+        <div style="background: #f8f9fc; border-radius: 9px; box-shadow: 0 2px 6px rgba(10,30,63,0.07); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1.1rem;">
+            <span style="font-size: 1.7em; background:#854cc7; color:#fff; border-radius:50%; width:2.1em; height:2.1em; text-align:center; display:flex; justify-content:center; align-items:center;">🗣️</span>
+            <div style="flex:1;">
+            <h2 style="color: #854cc7; font-family: 'Doto', 'Inter', Arial, sans-serif; font-size: 1.35rem; margin:0 0 0.25em 0;">Natural Language Processing Projects</h2>
+            <a href="nlp.html" style="color:#854cc7; background:#ede7f6; border:1.5px solid #854cc7; padding:6px 16px; border-radius:5px;font-size:0.97em;text-decoration:none; font-weight:600; display:inline-block; margin-top:0.2rem;">View More</a>
+            </div>
+        </div>
         </section>
+
+        <section id="other-ai">
+        <div style="background: #f8f9fc; border-radius: 9px; box-shadow: 0 2px 6px rgba(10,30,63,0.07); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1.1rem;">
+            <span style="font-size: 1.7em; background:#ee4c2c; color:#fff; border-radius:50%; width:2.1em; height:2.1em; text-align:center; display:flex; justify-content:center; align-items:center;">💡</span>
+            <div style="flex:1;">
+            <h2 style="color: #ee4c2c; font-family: 'Doto', 'Inter', Arial, sans-serif; font-size: 1.35rem; margin:0 0 0.25em 0;">Other AI & ML Projects</h2>
+            <a href="other-ai.html" style="color:#ee4c2c; background:#fff3e3; border:1.5px solid #ee4c2c; padding:6px 16px; border-radius:5px;font-size:0.97em;text-decoration:none; font-weight:600; display:inline-block; margin-top:0.2rem;">View More</a>
+            </div>
+        </div>
+        </section>
+
 
         <section id="languages">
             <h2>Languages</h2>
             <ul>
                 <li>English, Hindi Gujarati, Spanish</li>
             </ul>
-        </section>
-
-        <section id="hobbies">
-            <h2>Hobbies</h2>
-            <p>When I'm not coding, you can probably find me at the football ground!</p>
-            <ul>
-              <li>YouTube: Coding videos (1k subscribers)</li>
-              <li>Football, basketball, tennis, mountain biking</li>
-              <li>Twitter: Mostly tweets about AI, deep learning, and PyTorch</li>
-            </ul>
-          </section>
-    
+        </section>    
         <footer>
             <p>© 2025 Yashpalsinh Thakor. All rights reserved.</p>
         </footer>

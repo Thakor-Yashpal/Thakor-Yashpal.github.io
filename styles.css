@@ -39,132 +39,108 @@ header h1 {
   opacity: 0.8;
 }
 
-
-/* --- MODERNIZED RESPONSIVE NAVBAR --- */
-
-nav {
+/* for the top navbar */
+.top-nav {
   width: 100%;
   background: #fff;
   box-shadow: 0 1px 8px rgba(10,30,63,0.062);
   position: sticky;
   top: 0;
   z-index: 100;
-  margin-bottom: 28px;
   padding: 0;
+  margin-bottom: 28px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 55px;
 }
 
-/* Hamburger icon hidden by default */
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  padding: 0.6em 1em;
-  position: absolute;
-  right: 1.5em;
-  top: 1.2em;
-  z-index: 102;
-}
-.menu-icon span {
-  display: block;
-  height: 3px;
-  width: 26px;
-  margin: 5px 0;
-  background: #0353a4;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-/* Hide toggle by default */
-#menu-toggle {
-  display: none;
-}
-
-nav ul {
+.top-nav ul {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  gap: 0.4rem 1.2rem;
   list-style: none;
-  padding: 0.5rem 0;
   margin: 0;
-  gap: 0.4rem 1.1rem;
+  padding: 0.7rem 0 0.6rem 0;
 }
 
-/* Style nav links */
-nav ul li {
+.top-nav li {
   display: inline-block;
 }
 
-nav a {
+.top-nav a {
   color: #0353a4;
   font-weight: 500;
   font-family: 'Inter', 'IBM Plex Mono', Arial, sans-serif;
-  padding: 7px 15px;
+  padding: 7px 17px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.18s, color 0.16s;
+  transition: background 0.20s, color 0.17s;
   font-size: 1.08em;
   letter-spacing: 0.02em;
   display: inline-block;
 }
 
-nav a:hover, nav a.active {
+.top-nav a:hover,
+.top-nav a.active {
   background: #e3f2fd;
   color: #0a1e3f;
 }
 
-/* === Responsive Hamburger Nav === */
-@media (max-width: 850px) {
-  nav {
-    justify-content: flex-start;
-  }
-  .menu-icon {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    background: #fff;
-    position: absolute;
-    top: 55px; /* height of nav bar */
-    left: 0;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    box-shadow: 0 8px 22px rgba(10,30,63,0.10);
-    transition: max-height 0.28s cubic-bezier(.51,1.56,.37,.95);
-    gap: 0;
-    z-index: 101;
-  }
-  nav ul li {
-    display: block;
-    width: 100%;
-  }
-  nav a {
-    width: 100%;
-    display: block;
-    padding: 15px 24px;
-    border-radius: 0;
-    font-size: 1.03em;
-  }
-  /* Show menu when hamburger checked */
-  #menu-toggle:checked + .menu-icon + ul {
-    max-height: 500px;
-    padding-bottom: 0.8em;
-    padding-top: 0.5em;
-    overflow: visible;
-  }
-}
-@media (min-width: 851px) {
-  .menu-icon {
+
+
+/* Hide top-nav on mobile, show bottom-nav */
+
+@media (max-width: 767px) {
+  .top-nav {
     display: none;
   }
 }
+
+/* --- MODERNIZED RESPONSIVE NAVBAR --- */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0a1e3f;  /* Deep blue matching your theme */
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  box-shadow: 0 -2px 8px rgba(10, 30, 63, 0.15);
+  z-index: 9999;
+}
+
+.bottom-nav-link {
+  color: #fefefe;
+  text-decoration: none;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 6px 0;
+  transition: background 0.2s ease;
+}
+
+.bottom-nav-link i {
+  font-size: 1.3rem;
+  margin-bottom: 2px;
+}
+
+.bottom-nav-link.active, 
+.bottom-nav-link:hover {
+  background-color: #0353a4;  /* Accent highlight */
+  color: #e0e7ff;
+  border-radius: 8px 8px 0 0;
+}
+
+@media(min-width: 768px) {
+  /* Hide bottom nav on wider screens */
+  .bottom-nav {
+    display: none;
+  }
+}
+
 
 
 @media (max-width:800px) {
