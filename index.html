@@ -25,15 +25,16 @@
             </div>
 
 <style>
-/* Hide bottom nav on desktop and wide tablets */
-@media (min-width: 768px) {
-  .bottom-nav {
+/* ============================================================
+   MOBILE NAVIGATION FIX
+   ============================================================ */
+
+/* Hide top-nav and use bottom-nav on small screens */
+@media (max-width: 767px) {
+  .top-nav {
     display: none !important;
   }
-}
 
-/* Show and style bottom nav on mobile */
-@media (max-width: 767px) {
   .bottom-nav {
     display: flex;
     position: fixed;
@@ -47,10 +48,11 @@
     box-shadow: 0 -2px 12px rgba(10, 30, 63, 0.12);
     z-index: 9999;
   }
+
   .bottom-nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 0.97em;
+    font-size: 0.95em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,51 +63,62 @@
     padding: 0;
     margin: 0;
   }
+
   .bottom-nav-link i {
     font-size: 1.15rem;
-    margin-bottom: 0;
     line-height: 1;
   }
+
   .bottom-nav-link span {
-    font-size: 0.81em;
+    font-size: 0.8em;
     margin-top: 1px;
-    line-height: 1.12;
+    line-height: 1.1;
     letter-spacing: 0.01em;
   }
+
   .bottom-nav-link.active,
-  .bottom-nav-link:active,
-  .bottom-nav-link:focus,
-  .bottom-nav-link:hover {
+  .bottom-nav-link:hover,
+  .bottom-nav-link:focus {
     background: #0353a4;
-    color: #fff;
     border-radius: 8px 8px 0 0;
   }
+
+  /* Prevent content from being hidden behind bottom nav */
   body {
-    margin-bottom: 54px; /* Prevents page content from being hidden under the nav */
+    margin-bottom: 54px;
   }
 }
+
+/* Keep top-nav visible on larger screens */
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none !important;
+  }
+}
+
 </style>
 </header>
 
-    <!-- buttom (desktop/mobile) responsive navbar -->
-            <nav class="bottom-nav">
-            <a href="#projects" class="bottom-nav-link active">
-                <i class="fas fa-home"></i>
-                <span>Projects</span>
-            </a>
-            <a href="#skills" class="bottom-nav-link">
-                <i class="fas fa-code"></i>
-                <span>Skills</span>
-            </a>
-            <a href="#experience" class="bottom-nav-link">
-                <i class="fas fa-briefcase"></i>
-                <span>Experience</span>
-            </a>
-            <a href="contact.html" class="bottom-nav-link">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </a>
-            </nav>
+<!-- Bottom Navigation (for mobile) -->
+<nav class="bottom-nav">
+  <a href="#home" class="bottom-nav-link active">
+    <i class="fa-solid fa-house"></i>
+    <span>Home</span>
+  </a>
+  <a href="#projects" class="bottom-nav-link">
+    <i class="fa-solid fa-code"></i>
+    <span>Projects</span>
+  </a>
+  <a href="#skills" class="bottom-nav-link">
+    <i class="fa-solid fa-brain"></i>
+    <span>Skills</span>
+  </a>
+  <a href="contact.html" class="bottom-nav-link">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Contact</span>
+  </a>
+</nav>
+
 
         <!-- Top (desktop/mobile) responsive navbar -->
         <nav class="top-nav" id="top-nav">

@@ -1,23 +1,26 @@
-/* --- MODERNIZED PORTFOLIO CSS --- */
+/* ============================================================
+   MODERNIZED PORTFOLIO CSS
+   ============================================================ */
 
-/* 1. Google Fonts modern stack */
+/* 1. Global Styles & Typography */
 body {
   font-family: 'IBM Plex Mono', 'Inter', 'Roboto', Arial, sans-serif;
-  background-color: #fefefe;         /* Off-white for a clean appearance */
-  color: #0a1e3f;                    /* Deep navy blue text for high contrast */
+  background-color: #fefefe; /* Off-white for a clean appearance */
+  color: #0a1e3f;            /* Deep navy for readability */
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
-/* 2. Header - strong blue with white text */
+/* 2. Header */
 header {
-  background-color: #0a1e3f;         /* Modern dark blue */
+  background-color: #0a1e3f; /* Modern dark blue */
   color: #fefefe;
   padding: 2rem 0;
   text-align: center;
   margin-bottom: 2rem;
 }
+
 header h1 {
   font-family: 'Doto', 'Inter', Arial, sans-serif;
   font-weight: 700;
@@ -29,25 +32,26 @@ header h1 {
 .social-links {
   margin-top: 1rem;
 }
+
 .social-links a {
   color: #fefefe;
   font-size: 1.5rem;
   margin: 0 0.5rem;
   text-decoration: none;
+  transition: opacity 0.2s;
 }
+
 .social-links a:hover {
   opacity: 0.8;
 }
 
-/* for the top navbar */
-
-/* --- Responsive Top Navigation Bar --- */
-
-/* --- Responsive Top Navigation Bar --- */
+/* ============================================================
+   TOP NAVIGATION BAR
+   ============================================================ */
 .top-nav {
   width: 100%;
   background: #fff;
-  box-shadow: 0 1px 8px rgba(10,30,63,0.062);
+  box-shadow: 0 1px 8px rgba(10, 30, 63, 0.062);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -67,7 +71,9 @@ header h1 {
   transition: all 0.22s;
 }
 
-.top-nav li { display: inline-block; }
+.top-nav li {
+  display: inline-block;
+}
 
 .top-nav a {
   color: #0353a4;
@@ -79,7 +85,6 @@ header h1 {
   transition: background 0.2s, color 0.17s;
   font-size: 1.08em;
   letter-spacing: 0.02em;
-  display: inline-block;
 }
 
 .top-nav a:hover,
@@ -87,29 +92,42 @@ header h1 {
   background: #e3f2fd;
   color: #0a1e3f;
 }
-/* 4. Container improvements using Flexbox */
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1024px;
+
+/* ============================================================
+   CONTAINER LAYOUT
+   ============================================================ */
+.container,
+section {
+  max-width: 960px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
-/* 5. Section styles with card-like look */
+@media (max-width: 768px) {
+  .container,
+  section {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
 section {
   padding: 2rem 3rem;
-  background-color: #ffffff;           /* Clean white section */
+  background-color: #fff;
   border-radius: 10px;
   margin-bottom: 2.5rem;
   box-shadow: 0 4px 16px rgba(10, 30, 63, 0.1);
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
+
 section h2 {
   font-family: 'Doto', 'Inter', sans-serif;
   font-weight: 600;
@@ -119,7 +137,9 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-/* 6. Project cards: grid/flex layout, images, badges */
+/* ============================================================
+   PROJECT CARDS
+   ============================================================ */
 .project {
   background: #f8f9fc;
   border: 1px solid #d9e2ec;
@@ -128,7 +148,7 @@ section h2 {
   box-shadow: 0 1px 4px rgba(10, 30, 63, 0.04);
   display: grid;
   grid-template-columns: 64px 1fr auto;
-  grid-gap: 18px;
+  gap: 18px;
   align-items: center;
 }
 
@@ -137,7 +157,7 @@ section h2 {
   height: 64px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
 }
 
 .project h3 {
@@ -146,6 +166,7 @@ section h2 {
   font-size: 1.1rem;
   grid-column: span 2;
 }
+
 .project p {
   color: #33475b;
   font-size: 1em;
@@ -156,11 +177,10 @@ section h2 {
 .project ul {
   padding-left: 20px;
   color: #33475b;
-  margin-top: 0.25rem;
-  margin-bottom: 0;
+  margin: 0.25rem 0 0;
   grid-column: 2 / span 2;
 }
-/* Project link as a modern badge-like button */
+
 .project a {
   color: #0353a4;
   font-weight: 600;
@@ -171,13 +191,16 @@ section h2 {
   transition: background-color 0.26s, border-color 0.22s;
   justify-self: end;
 }
+
 .project a:hover {
   background-color: #0353a4;
   color: #fff;
   border-color: #0353a4;
 }
 
-/* 7. Concise badges for project tags/status */
+/* ============================================================
+   BADGES
+   ============================================================ */
 .badge {
   background-color: #0353a4;
   color: #fff;
@@ -186,55 +209,60 @@ section h2 {
   font-size: 0.75rem;
   margin-left: 6px;
   font-weight: 600;
-  vertical-align: middle;
   display: inline-block;
+  vertical-align: middle;
 }
+
 .badge.in-progress {
   background-color: #ffc107;
   color: #222;
 }
+
 .badge.pytorch {
   background-color: #ee4c2c;
-  color: #fff;
-}
-.badge.cv {
-  background-color: #3EC6E0;
-  color: #fff;
-}
-.badge.nlp {
-  background-color: #854cc7;
-  color: #fff;
 }
 
-/* 8. Section header stripe */
+.badge.cv {
+  background-color: #3ec6e0;
+}
+
+.badge.nlp {
+  background-color: #854cc7;
+}
+
+/* ============================================================
+   HEADER STRIPE
+   ============================================================ */
 .header-stripe {
   background-color: #d4e5fc;
   height: 5px;
   width: 50%;
-  margin: 0 auto;
-  margin-top: 0.5rem;
+  margin: 0.5rem auto 0;
 }
 
-/* 9. Button style */
+/* ============================================================
+   BUTTONS
+   ============================================================ */
 .button {
   background-color: #0353a4;
   border: none;
   color: white;
   padding: 10px 20px;
+  border-radius: 6px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
-  border-radius: 6px;
   transition: background 0.22s;
 }
+
 .button:hover {
   background: #167bf7;
 }
 
-/* 10. Footer remains clean and stylish */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 footer {
   background-color: #0a1e3f;
   color: #fefefe;
@@ -242,31 +270,39 @@ footer {
   padding: 1rem 0;
 }
 
-/* 11. Responsive design preserved and enhanced */
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.2rem;
   }
+
   section {
     padding: 1.3rem 0.5rem;
     gap: 1.2rem;
   }
+
   .project {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 14px 8px;
   }
+
   .project-image {
     width: 90%;
     max-width: 220px;
     height: auto;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 10px;
   }
+
   .project a {
     width: 100%;
     margin-top: 10px;
   }
 }
 
-/* --- END MODERNIZED --- */
+/* ============================================================
+   END OF STYLES
+   ============================================================ */
